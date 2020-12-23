@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="SXPS_XAML2.XAML.TopBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:SXPS_XAML2.XAML"
+             mc:Ignorable="d">
+
+    <DockPanel Background="#130017" Height="25" MinWidth="150" VerticalAlignment="Bottom">
+
+        <Image Width="23" Height="23" Margin="1" Source="/Images/topbar/SXPS_W50.png" Stretch="Fill" DockPanel.Dock="Left"/>
+
+        <Button  Click="exit_Click" DockPanel.Dock="Right" Style="{StaticResource MaterialDesignFloatingActionButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}">
+            <materialDesign:PackIcon VerticalAlignment="Center" Kind="WindowClose" Width="24" Height="24" Foreground="White"/>
+        </Button>
+        <Button  Click="maximize_Click" DockPanel.Dock="Right" Style="{StaticResource MaterialDesignFloatingActionButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}">
+            <materialDesign:PackIcon x:Name="Maximize" VerticalAlignment="Center" Kind="Fullscreen" Width="24" Height="24" Foreground="White"/>
+        </Button>
+        <Button  Click="minimize_Click" DockPanel.Dock="Right" Style="{StaticResource MaterialDesignFloatingActionButton}"  Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}">
+            <materialDesign:PackIcon VerticalAlignment="Center" Kind="WindowMinimize" Width="20" Height="20" Foreground="White"/>
+        </Button>
+        
+        
+        
+        <Rectangle Stroke="Transparent"></Rectangle>
+    </DockPanel>
+</UserControl>

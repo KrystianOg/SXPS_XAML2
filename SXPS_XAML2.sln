@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SXPS_XAML2", "SXPS_XAML2\SXPS_XAML2.csproj", "{38268319-A42C-440B-AE76-302579E66DDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38268319-A42C-440B-AE76-302579E66DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38268319-A42C-440B-AE76-302579E66DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38268319-A42C-440B-AE76-302579E66DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38268319-A42C-440B-AE76-302579E66DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D4600AB-0E87-434A-97DB-C367B51F030A}
+	EndGlobalSection
+EndGlobal

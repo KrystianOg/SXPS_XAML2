@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38268319-A42C-440B-AE76-302579E66DDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SXPS_XAML2</RootNamespace>
+    <AssemblyName>SXPS_XAML2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveUp.Net, Version=2.1.41.0, Culture=neutral, PublicKeyToken=2ff270728258992b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.Net-trunk.2.1.41\lib\net40\ActiveUp.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Common, Version=2.1.41.0, Culture=neutral, PublicKeyToken=6cceae6a4844c51b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.Net-trunk.2.1.41\lib\net40\ActiveUp.Net.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Dns, Version=2.1.41.0, Culture=neutral, PublicKeyToken=6fc67824e0089991, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.Net-trunk.2.1.41\lib\net40\ActiveUp.Net.Dns.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Groupware, Version=2.1.41.0, Culture=neutral, PublicKeyToken=db51b95d57ebfe25, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.Net-trunk.2.1.41\lib\net40\ActiveUp.Net.Groupware.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Imap4, Version=2.1.41.0, Culture=neutral, PublicKeyToken=9d424b1770e92b68, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.Net-trunk.2.1.41\lib\net40\ActiveUp.Net.Imap4.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Mail, Version=2.1.41.0, Culture=neutral, PublicKeyToken=851b9e39ef2572fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.Net-trunk.2.1.41\lib\net40\ActiveUp.Net.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Nntp, Version=2.1.41.0, Culture=neutral, PublicKeyToken=01416978360a49a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.Net-trunk.2.1.41\lib\net40\ActiveUp.Net.Nntp.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.OpenPGP, Version=2.1.41.0, Culture=neutral, PublicKeyToken=0e094b86584219e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.Net-trunk.2.1.41\lib\net40\ActiveUp.Net.OpenPGP.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Pop3, Version=2.1.41.0, Culture=neutral, PublicKeyToken=962567372c07b9fe, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.Net-trunk.2.1.41\lib\net40\ActiveUp.Net.Pop3.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.Smtp, Version=2.1.41.0, Culture=neutral, PublicKeyToken=366752d00f09ae34, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.Net-trunk.2.1.41\lib\net40\ActiveUp.Net.Smtp.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveUp.Net.WhoIs, Version=2.1.41.0, Culture=neutral, PublicKeyToken=6b9afb81c1de5ed4, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailSystem.Net-trunk.2.1.41\lib\net40\ActiveUp.Net.WhoIs.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.29.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.29\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.7.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.7\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.2.0.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.3.2.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.1.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.1.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Svg2Xaml, Version=0.3.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Svg2Xaml.0.3.0.7\lib\net40\Svg2Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ClassResources\Settings.cs" />
+    <Compile Include="Data\Generate.cs" />
+    <Compile Include="Data\IO.cs" />
+    <Compile Include="Data\Sneakers\NikeSneaker.cs" />
+    <Compile Include="Data\Sneakers\SizesList.cs" />
+    <Compile Include="Data\Sneakers\SneakersList.cs" />
+    <Compile Include="Data\TrendLine.cs" />
+    <Compile Include="Devices\Printer.cs" />
+    <Compile Include="Enums\BrowserDriver.cs" />
+    <Compile Include="Enums\Currency.cs" />
+    <Compile Include="Enums\Table.cs" />
+    <Compile Include="Network\EMail.cs" />
+    <Compile Include="Network\Facebook.cs" />
+    <Compile Include="Network\Nike.cs" />
+    <Compile Include="Network\Tests.cs" />
+    <Compile Include="Network\Webscrape.cs" />
+    <Compile Include="Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User\User.cs" />
+    <Compile Include="XAML\Panels\AccountPanel.xaml.cs">
+      <DependentUpon>AccountPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\Panels\FavouritePanel.xaml.cs">
+      <DependentUpon>FavouritePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\Panels\CurrenciesPanel.xaml.cs">
+      <DependentUpon>CurrenciesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\Panels\SettingsPanel.xaml.cs">
+      <DependentUpon>SettingsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\Panels\SneakerPanel.xaml.cs">
+      <DependentUpon>SneakerPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\Panels\SearchPanel.xaml.cs">
+      <DependentUpon>SearchPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\Panels\NikePanel.xaml.cs">
+      <DependentUpon>NikePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\SneakerContainer.xaml.cs">
+      <DependentUpon>SneakerContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\TopBar.xaml.cs">
+      <DependentUpon>TopBar.xaml</DependentUpon>
+    </Compile>
+    <Page Include="LogInWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LogInWindow.xaml.cs">
+      <DependentUpon>LogInWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XAML\Panels\AccountPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XAML\Panels\FavouritePanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XAML\Panels\CurrenciesPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XAML\Panels\SettingsPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XAML\Panels\SneakerPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XAML\Panels\SearchPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XAML\Panels\NikePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XAML\SneakerContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XAML\TopBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SXPS_def_400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\topbar\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\topbar\default_view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\topbar\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\topbar\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\topbar\SXPS_W50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu\client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu\exchange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu\sneaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu\nike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu\favourite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sneaker\fire36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\sxps\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Network\Drivers\MicrosoftWebDriver.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.87.0.4280.8800\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.87.0.4280.8800\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.87.0.4280.8800\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.87.0.4280.8800\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets')" />
+</Project>

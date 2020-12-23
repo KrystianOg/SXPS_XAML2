@@ -1,0 +1,95 @@
+﻿<Window x:Class="SXPS_XAML2.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:SXPS_XAML2" xmlns:xaml="clr-namespace:SXPS_XAML2.XAML"
+        xmlns:local2="clr-namespace:SXPS_XAML2" xmlns:Panels="clr-namespace:SXPS_XAML2.XAML.Panels"
+        mc:Ignorable="d"
+        
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Menu" Height="730" Width="1180" MinHeight="200" MinWidth="400" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    
+    <Window.Resources>
+        <SolidColorBrush x:Key="Border">#712571</SolidColorBrush>
+        <SolidColorBrush x:Key="Text">#DADADA</SolidColorBrush>
+        <SolidColorBrush x:Key="DefaultBackground">#1d0024</SolidColorBrush>
+        <SolidColorBrush x:Key="DarkBackground">#17001c</SolidColorBrush>
+    </Window.Resources>
+
+    <DockPanel Background="{StaticResource DefaultBackground}"> 
+
+        <xaml:TopBar DockPanel.Dock="Top" MouseDown="MouseDrag"/>
+
+        <Grid Width="162" DockPanel.Dock="Right" >
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,0">
+                    <GradientStop Color="#1d0024" Offset="0"/>
+                    <GradientStop Color="#8e0d5b" Offset="2"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Border Margin="0 3 0 10" CornerRadius="0 0 0 30" Background="#130017"/>
+
+            <StackPanel Width="162" HorizontalAlignment="Right">
+
+                <Button x:Name="Account" Style="{StaticResource MaterialDesignRaisedLightButton}" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="HandleButtons">
+                    <Image Source="Images/menu/client.png" />
+                </Button>
+                <Label x:Name="Hello" Margin="0,0,0,15" Content="Hello + name" Foreground="{StaticResource Text}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Button x:Name="Search" Style="{StaticResource MaterialDesignRaisedLightButton}" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Click="HandleButtons">
+                    <Image Source="Images/menu/search.png" Stretch="None"/>
+                </Button>
+                <Button x:Name="Nike" Style="{StaticResource MaterialDesignRaisedLightButton}" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Click="HandleButtons">
+                    <Image Source="Images/menu/nike.png" Stretch="None"/>
+                </Button>
+                <Button x:Name="Sneaker" Style="{StaticResource MaterialDesignRaisedLightButton}" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Click="HandleButtons">
+                    <Image Source="Images/menu/sneaker.png" Stretch="None"/>
+                </Button>
+                <Button x:Name="Favourite" Style="{StaticResource MaterialDesignRaisedLightButton}" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Click="HandleButtons">
+                    <Image Source="Images/menu/favourite.png" Stretch="None"/>
+                </Button>
+                <Button x:Name="Currencies" Style="{StaticResource MaterialDesignRaisedLightButton}" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Click="HandleButtons">
+                    <Image Source="Images/menu/exchange.png" Stretch="None"/>
+                </Button>
+                <Button x:Name="Settings" Style="{StaticResource MaterialDesignRaisedLightButton}" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Click="HandleButtons">
+                    <Image Source="Images/menu/settings.png" Stretch="None"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Margin="3" Height="74" VerticalAlignment="Top" DockPanel.Dock="Top">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#8e0d5b" Offset="0"/>
+                    <GradientStop Color="#1d0024" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Border Margin="0 0 0 10" CornerRadius="0 0 0 20" Background="#130017"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <Image x:Name="TabImage" VerticalAlignment="Center" Margin="30 10 30 10" Height="50" Source="Images/menu/nike.png" Stretch="None"/>
+                <Label x:Name="TabLabel" Margin="0 5 0 0" Content="NIKE" VerticalAlignment="Center" Foreground="{StaticResource Text}" FontSize="28"/>
+            </StackPanel>
+            
+        </Grid>
+
+        <Grid Margin="3">
+            <Panels:AccountPanel x:Name="AccountPanel" Visibility="Hidden"/>
+            <Panels:SearchPanel x:Name="SearchPanel" Visibility="Hidden"/>
+            <Panels:NikePanel x:Name="NikePanel" Visibility="Hidden"/>
+            <Panels:SneakerPanel x:Name="SneakerPanel" Visibility="Hidden"/>
+            <Panels:FavouritePanel x:Name="FavouritePanel" Visibility="Hidden"/>
+            <Panels:CurrenciesPanel x:Name="CurrenciesPanel" Visibility="Hidden" />
+            <Panels:SettingsPanel x:Name="SettingsPanel" Visibility="Hidden"/>
+        </Grid>
+        
+    </DockPanel>
+</Window>
